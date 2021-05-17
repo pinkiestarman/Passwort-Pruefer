@@ -2,4 +2,8 @@
 
 Prüft ob das Passwort bestimmten Regeln entspricht
 
-fdas
+Regeln:
+
+1. Länge des Passworts
+2. Zahlen
+3. Sonderzeichen
