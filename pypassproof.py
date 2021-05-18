@@ -31,3 +31,5 @@ def readcfg(file = "passwdparams.txt"):
     f = open(file)
     paramlist = f.read().splitlines()
     print(paramlist)
+
+def hallo():
