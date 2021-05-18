@@ -32,4 +32,4 @@ def readcfg(file = "passwdparams.txt"):
     paramlist = f.read().splitlines()
     print(paramlist)
 
-def hallo():
+def tschüss():
