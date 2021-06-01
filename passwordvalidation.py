@@ -2,9 +2,9 @@
 
 import re #re für Regular Expressions
 
-password = input("Ihr Passwort: ") #eingabefeld
-flag = 0
-while True:  
+flag = -1
+while flag == -1:  
+    password = input("Ihr Passwort: ") #eingabefeld
     if (len(password)<8):
         flag = -1
         print("Das Passwort muss mindestens 8 Zeichen lang sein")
@@ -19,7 +19,7 @@ while True:
         break
     elif not re.search("[0-9]", password):
         flag = -1
-        print("Das Passwort muss mindestens eine Zahl enthalten")
+        print("Das Passwort muss mindetsens eine Zahl enthalten")
         break
     elif not re.search("[_@$!]", password):
         flag = -1
@@ -34,5 +34,5 @@ while True:
         print("Valid Password")
         break
   
-if flag ==-1:
-    print("Not a Valid Password")
+    if flag ==-1:
+        print("Not a Valid Password")
