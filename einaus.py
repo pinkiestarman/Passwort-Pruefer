@@ -1,7 +1,7 @@
 def eingabe():
-    password = ""
+    password = input("Dein Passwort: ")
 
     return  password
 
 def ausgabe(istgut = False):
-    print()
+    print ("Valid password")

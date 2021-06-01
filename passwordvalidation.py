@@ -19,7 +19,7 @@ while True:
         break
     elif not re.search("[0-9]", password):
         flag = -1
-        print("Das Passwort muss mindetsens eine Zahl enthalten")
+        print("Das Passwort muss mindestens eine Zahl enthalten")
         break
     elif not re.search("[_@$!]", password):
         flag = -1
