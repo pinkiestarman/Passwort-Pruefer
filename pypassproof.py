@@ -1,4 +1,5 @@
 #! python3
+import re
 
 def passlen(minlen = 8, password=""):
     """
@@ -12,24 +13,28 @@ def howmanynumbers(password=""):
     Wie viele Zahlen sind im string
     @return int
     """
-    r = 0
-    for c in password:
-        r += c.isdecimal()
-    return r
+    return len(re.findall("[0-9]", password))
+        
 
-def howmanyspecial(string = ""):
+def howmanyspecial(password = ""):
     """
     Wie viele Sonderzeichen sind im string
     @return int
     """
-    r = 0
-    for c in string:
-        r += c.isalnum()
-    return r - string.length
-
-def readcfg(file = "passwdparams.txt"):
-    f = open(file)
-    paramlist = f.read().splitlines()
-    print(paramlist)
+    return len(re.findall("[_@$!]", password))
 
 
+def howmanylower(password = ""):
+    """
+    Wie viele Sonderzeichen sind im string
+    @return int
+    """
+    return len(re.findall("[a-z]", password))
+
+
+def howmanyupper(password = ""):
+    """
+    Wie viele Sonderzeichen sind im string
+    @return int
+    """
+    return len(re.findall("[A-Z]", password))
