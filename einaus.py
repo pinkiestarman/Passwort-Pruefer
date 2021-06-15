@@ -4,4 +4,11 @@ def eingabe():
     return  password
 
 def ausgabe(istgut = False):
-    print ("Valid password")
+    if istgut:
+        print ("Valid password")
+    else:
+        print ("Invalid password")
+
+def passcriteriain():
+    passcriteria = {"Length":8,"Upper":1,"Lower":1,"Numbers":1,"Special":1}
+    return passcriteria
